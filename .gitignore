@@ -36,3 +36,8 @@ yarn-error.*
 *.tsbuildinfo
 
 app-example
+
+# memlog specific
+memlog/temp/
+memlog/*.log
+memlog/credentials/

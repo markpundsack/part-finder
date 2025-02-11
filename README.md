@@ -1,18 +1,71 @@
-> Edited for use in IDX on 07/09/12
+# Part Finder
 
-# Welcome to your Expo app 👋
+A mobile app for Warhammer model builders to quickly locate parts on their sprues. Built with React Native and Expo.
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+## Features
 
-## Get started
+- Take pictures of your sprues and automatically detect part numbers
+- Search for specific parts and see their exact location
+- Manage multiple boxes of sprues
+- Real-time perspective guide for capturing sprues
+- Support for lettered sprues (e.g., "A12" format)
+- Quick multi-sprue capture workflow
 
-#### Android
+## Getting Started
+
+### Prerequisites
+
+- Node.js
+- npm or yarn
+- iOS device or simulator (for iOS development)
+- Xcode (for iOS development)
+- Android Studio (for Android development)
+
+### Installation
+
+1. Clone the repository:
+```bash
+git clone https://github.com/yourusername/part-finder.git
+cd part-finder
+```
+
+2. Install dependencies:
+```bash
+npm install
+```
+
+3. Start the development server:
+```bash
+npm start
+```
+
+### iOS Development
+
+1. Install iOS dependencies:
+```bash
+cd ios
+pod install
+cd ..
+```
+
+2. Open the iOS simulator:
+```bash
+npm run ios
+```
+
+Or to run on a physical device:
+1. Open `ios/PartFinder.xcworkspace` in Xcode
+2. Select your device in the device dropdown
+3. Press the Play button or `Cmd + R`
+
+### Android Development
 
 Android previews are defined as a `workspace.onStart` hook and started as a vscode task when the workspace is opened/started.
 
-Note, if you can't find the task, either:
-- Rebuild the environment (using command palette: `IDX: Rebuild Environment`), or
-- Run `npm run android -- --tunnel` command manually run android and see the output in your terminal. The device should pick up this new command and switch to start displaying the output from it.
+
+```
+npm run android -- --tunnel
+```
 
 In the output of this command/task, you'll find options to open the app in a
 
@@ -28,26 +81,42 @@ Web previews will be started and managred automatically. Use the toolbar to manu
 
 You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
 
-## Get a fresh project
 
-When you're ready, run:
+## Development
 
-```bash
-npm run reset-project
-```
+The app uses:
+- [Expo Router](https://docs.expo.dev/router/introduction/) for navigation
+- [Tesseract.js](https://tesseract.projectnaptha.com/) for OCR
+- AsyncStorage for data persistence
+- React Native's camera and image picker APIs
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+Key directories:
+- `app/`: Main application code with file-based routing
+- `components/`: Reusable React components
+- `utils/`: Helper functions and utilities
+- `types/`: TypeScript type definitions
+- `assets/`: Images, fonts, and other static files
 
-## Learn more
+## Learn More
 
-To learn more about developing your project with Expo, look at the following resources:
+- [Expo documentation](https://docs.expo.dev/)
+- [React Native documentation](https://reactnative.dev/)
+- [Expo Router documentation](https://docs.expo.dev/router/introduction/)
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+## Contributing
 
-## Join the community
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
-Join our community of developers creating universal apps.
+## License
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+## Acknowledgments
+
+- Thanks to the Warhammer community for inspiration
+- Built with [Expo](https://expo.dev)
+- OCR powered by [Tesseract.js](https://tesseract.projectnaptha.com/)
